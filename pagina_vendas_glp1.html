@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programa Preservação Corporal GLP-1 — Studio Fit Personal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#007C78;--teal2:#0A8F86;--tealDark:#075E56;--tealSoft:#E5F5F2;
+  --mag:#C0265C;--mag2:#D44472;--magSoft:#FBE8F0;
+  --green:#11845B;--greenSoft:#EAF8F0;
+  --amber:#B7791F;--amberSoft:#FFF5DA;
+  --ink:#20242A;--ink2:#303741;--muted:#697280;--soft:#98A2B3;
+  --line:#E6E4DF;--line2:#EEF0EA;--card:#FFFFFF;--bg:#F8F7F4;
+  --dark:#0C0F14;--dark2:#141922;
+  --shadow:0 20px 70px rgba(16,24,40,.10);
+  --r:24px;--r2:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Manrope",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.center{text-align:center}
+
+/* ============ HERO (dark) ============ */
+.hero{position:relative;background:
+   radial-gradient(circle at 12% 18%,rgba(0,124,120,.22),transparent 34%),
+   radial-gradient(circle at 88% 12%,rgba(192,38,92,.22),transparent 32%),
+   linear-gradient(160deg,#0C0F14 0%,#141922 60%,#0C0F14 100%);
+   color:#fff;overflow:hidden;padding:30px 0 70px}
+.hero:before{content:"";position:absolute;top:-60px;left:-80px;width:280px;height:280px;border:1px solid rgba(0,124,120,.30);border-radius:50%}
+.hero:after{content:"";position:absolute;right:-120px;bottom:-120px;width:360px;height:360px;border:1px solid rgba(192,38,92,.22);border-radius:50%}
+.nav{display:flex;align-items:center;justify-content:center;gap:13px;padding:6px 0 34px;position:relative;z-index:2}
+.sf-mark{font-size:30px;font-weight:800;letter-spacing:-5px;line-height:1;
+  background:linear-gradient(110deg,var(--teal2),#19b3a6 46%,var(--mag) 54%,var(--mag2));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.sf-name{font-size:17px;font-weight:800;letter-spacing:6px;text-transform:uppercase;color:#fff}
+.sf-name b{color:var(--teal2)}
+.sf-sub{font-size:9px;font-weight:700;letter-spacing:6px;text-transform:uppercase;color:var(--soft);margin-top:1px}
+
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center;position:relative;z-index:2}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);border-radius:999px;font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:#fff}
+.kicker i{width:7px;height:7px;border-radius:50%;background:linear-gradient(90deg,var(--teal2),var(--mag));display:block}
+.hero h1{margin-top:22px;font-size:clamp(40px,6.2vw,72px);line-height:.97;letter-spacing:-2.5px;font-weight:800}
+.hero h1 .mag{background:linear-gradient(100deg,var(--mag),var(--mag2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{max-width:430px;margin-top:24px;font-size:clamp(17px,2vw,21px);line-height:1.35;color:rgba(255,255,255,.82);font-weight:500}
+.hero .sub b{color:#fff;font-weight:800}
+.hero .sub .t{color:var(--teal2)}
+.hero-cta{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 30px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;border:none;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+.btn-primary{background:linear-gradient(100deg,var(--mag),var(--mag2));color:#fff;box-shadow:0 14px 40px rgba(192,38,92,.40)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 50px rgba(192,38,92,.52)}
+.btn-ghost{background:rgba(255,255,255,.07);color:#fff;border:1px solid rgba(255,255,255,.18)}
+.btn-ghost:hover{background:rgba(255,255,255,.13)}
+.hero-mini{margin-top:16px;font-size:13px;color:var(--soft)}
+
+.hero-card{background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:26px;backdrop-filter:blur(6px)}
+.hero-card .lab{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal2)}
+.hero-card h3{font-size:19px;font-weight:800;margin:4px 0 18px;color:#fff}
+.metric{display:flex;align-items:baseline;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.metric:last-child{border-bottom:none}
+.metric .ml{font-size:14px;color:rgba(255,255,255,.72)}
+.metric .mv{font-size:22px;font-weight:800}
+.metric .mv.g{color:#3dd7a0}.metric .mv.m{color:var(--mag2)}.metric .mv.t{color:var(--teal2)}
+.hero-card .tag{margin-top:16px;font-size:12px;color:var(--soft);text-align:center}
+
+/* ============ STRIP ============ */
+.strip{background:var(--dark2);color:#fff;padding:18px 0;border-top:1px solid rgba(255,255,255,.06)}
+.strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft)}
+.strip b{color:var(--teal2)}
+
+/* ============ SECTION base (light) ============ */
+section.light{padding:74px 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--mag)}
+.eyebrow:before{content:"";width:22px;height:2px;background:var(--mag);display:block}
+h2.sec{font-size:clamp(28px,4vw,42px);line-height:1.08;letter-spacing:-1.2px;font-weight:800;color:var(--ink);margin:14px 0 0;max-width:780px}
+h2.sec .t{color:var(--teal)}h2.sec .m{color:var(--mag)}
+.lead{font-size:18px;color:var(--muted);margin-top:18px;max-width:680px;line-height:1.55}
+
+/* problem cards */
+.prob-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:38px}
+.prob{background:var(--card);border:1px solid var(--line);border-radius:var(--r2);padding:24px 24px 22px;box-shadow:0 10px 34px rgba(16,24,40,.04)}
+.prob .n{font-size:13px;font-weight:800;color:var(--mag);letter-spacing:1px}
+.prob h4{font-size:18px;font-weight:800;color:var(--ink);margin:8px 0 6px}
+.prob p{font-size:15px;color:var(--muted);line-height:1.5}
+
+/* the shift / tese */
+.tese{background:linear-gradient(160deg,#0C0F14,#141922);color:#fff;border-radius:var(--r);padding:48px 44px;margin-top:10px;position:relative;overflow:hidden}
+.tese:before{content:"";position:absolute;right:-80px;top:-80px;width:240px;height:240px;border:1px solid rgba(0,124,120,.3);border-radius:50%}
+.tese .q{font-size:clamp(22px,3vw,30px);line-height:1.3;font-weight:800;max-width:760px;position:relative;z-index:2}
+.tese .q .t{color:var(--teal2)}.tese .q .m{color:var(--mag2)}
+.tese .src{margin-top:18px;font-size:13px;color:var(--soft);position:relative;z-index:2}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r2);padding:22px 16px;text-align:center;position:relative}
+.step .sn{width:38px;height:38px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--teal),var(--teal2))}
+.step:nth-child(even) .sn{background:linear-gradient(135deg,var(--mag),var(--mag2))}
+.step h5{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:6px}
+.step p{font-size:12.5px;color:var(--muted);line-height:1.4}
+
+/* deliverables */
+.deliv{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:38px}
+.di{display:grid;grid-template-columns:50px 1fr;gap:15px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:var(--r2);padding:20px 22px}
+.di .ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:var(--tealSoft);color:var(--teal)}
+.di:nth-child(even) .ic{background:var(--magSoft);color:var(--mag)}
+.di .ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.di h4{font-size:16px;font-weight:800;color:var(--ink)}
+.di p{font-size:14px;color:var(--muted);margin-top:3px;line-height:1.45}
+
+/* proof / case */
+.proof{background:linear-gradient(160deg,#ffffff,#F4F9F7);border:1px solid var(--line2);border-radius:var(--r);padding:44px;margin-top:10px;box-shadow:var(--shadow)}
+.proof .ph{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.proof .pill{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--teal);background:var(--tealSoft);padding:6px 13px;border-radius:999px}
+.proof h3{font-size:clamp(22px,3vw,30px);font-weight:800;color:var(--ink);margin:16px 0 6px;letter-spacing:-.6px}
+.proof .csub{font-size:15px;color:var(--muted);margin-bottom:26px}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 16px;text-align:center}
+.stat .v{font-size:30px;font-weight:800;letter-spacing:-1px}
+.stat .v.t{color:var(--teal)}.stat .v.m{color:var(--mag)}.stat .v.g{color:var(--green)}
+.stat .l{font-size:12.5px;color:var(--muted);margin-top:5px;line-height:1.3}
+.proof .note{margin-top:24px;font-size:14px;color:var(--ink2);background:rgba(0,124,120,.06);border-left:4px solid var(--teal);padding:14px 18px;border-radius:0 12px 12px 0}
+
+/* for whom */
+.whom{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:38px}
+.whom .col{background:var(--card);border:1px solid var(--line);border-radius:var(--r2);padding:28px}
+.whom .col h4{font-size:17px;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:9px}
+.whom .yes h4{color:var(--green)}.whom .no h4{color:var(--mag)}
+.whom li{list-style:none;font-size:15px;color:var(--ink2);padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--line2)}
+.whom li:last-child{border-bottom:none}
+.whom .yes li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+.whom .no li:before{content:"✕";position:absolute;left:0;color:var(--mag);font-weight:800}
+
+/* offer */
+.offer{background:linear-gradient(160deg,#0C0F14,#141922);color:#fff;border-radius:var(--r);padding:52px 44px;margin-top:10px;position:relative;overflow:hidden}
+.offer:before{content:"";position:absolute;left:-90px;bottom:-90px;width:300px;height:300px;border:1px solid rgba(192,38,92,.22);border-radius:50%}
+.offer:after{content:"";position:absolute;right:-70px;top:-70px;width:220px;height:220px;border:1px solid rgba(0,124,120,.26);border-radius:50%}
+.offer .inner{position:relative;z-index:2;text-align:center}
+.offer .vagas{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:rgba(192,38,92,.22);border:1px solid rgba(192,38,92,.4);padding:8px 16px;border-radius:999px}
+.offer h3{font-size:clamp(24px,3.4vw,34px);font-weight:800;margin:20px 0 6px;letter-spacing:-.6px}
+.offer .incl{max-width:560px;margin:22px auto 0;text-align:left}
+.offer .incl li{list-style:none;font-size:15px;color:rgba(255,255,255,.86);padding:10px 0 10px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.08)}
+.offer .incl li:before{content:"✓";position:absolute;left:0;color:var(--teal2);font-weight:800}
+.price{margin-top:34px}
+.price .from{font-size:17px;color:var(--soft);text-decoration:line-through}
+.price .now{font-size:clamp(42px,6vw,60px);font-weight:800;line-height:1;margin-top:6px}
+.price .now small{font-size:24px;color:var(--soft);font-weight:700}
+.price .inst{font-size:16px;color:rgba(255,255,255,.8);margin-top:8px}
+.offer .btn{margin-top:30px}
+.guarantee{margin-top:22px;font-size:14px;color:rgba(255,255,255,.7);max-width:520px;margin-left:auto;margin-right:auto;line-height:1.5}
+
+/* authority */
+.auth{display:grid;grid-template-columns:1fr;gap:0;margin-top:38px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:36px 40px;box-shadow:0 10px 34px rgba(16,24,40,.04)}
+.auth h3{font-size:22px;font-weight:800;color:var(--ink)}
+.auth .role{font-size:14px;color:var(--mag);font-weight:700;margin-top:3px}
+.auth p{font-size:15px;color:var(--muted);margin-top:14px;line-height:1.6;max-width:760px}
+.auth .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.auth .cred{font-size:13px;font-weight:700;color:var(--tealDark);background:var(--tealSoft);padding:8px 14px;border-radius:999px}
+
+/* faq */
+.faq{margin-top:36px;display:grid;gap:12px}
+.qa{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px}
+.qa h5{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:6px}
+.qa p{font-size:14.5px;color:var(--muted);line-height:1.5}
+
+/* final cta */
+.final{background:
+   radial-gradient(circle at 20% 20%,rgba(0,124,120,.2),transparent 38%),
+   radial-gradient(circle at 85% 30%,rgba(192,38,92,.2),transparent 36%),
+   linear-gradient(160deg,#0C0F14,#141922);color:#fff;padding:80px 0;text-align:center}
+.final h2{font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:-1.2px;max-width:760px;margin:0 auto;line-height:1.08}
+.final h2 .m{color:var(--mag2)}.final h2 .t{color:var(--teal2)}
+.final p{font-size:18px;color:rgba(255,255,255,.78);margin:20px auto 0;max-width:560px}
+
+/* footer */
+.foot{background:#0C0F14;color:var(--soft);padding:34px 0;text-align:center;font-size:13px;border-top:1px solid rgba(255,255,255,.06)}
+.foot .fn{font-size:15px;font-weight:800;color:#fff;letter-spacing:4px;text-transform:uppercase}
+.foot .leg{margin-top:14px;font-size:11.5px;color:#5a6270;max-width:680px;margin-left:auto;margin-right:auto;line-height:1.5}
+
+/* responsive */
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .prob-grid,.deliv,.whom{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .tese,.offer,.proof,.auth{padding:32px 24px}
+  .hero{padding:24px 0 54px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav">
+      <span class="sf-mark">SF</span>
+      <span>
+        <span class="sf-name">STUDIO <b>FIT</b></span>
+        <span class="sf-sub" style="display:block">PERSONAL</span>
+      </span>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="kicker"><i></i> Programa Preservação Corporal GLP-1</span>
+        <h1>A balança baixou.<br><span class="mag">E a sua força?</span></h1>
+        <p class="sub">Emagrecer com a caneta é a parte fácil. <b>Preservar <span class="t">músculo, força e saúde metabólica</span></b> enquanto o peso cai — isso é método.</p>
+        <div class="hero-cta">
+          <a href="#COLAR_LINK_EDUZZ_AQUI" class="btn btn-primary">Quero minha vaga &rarr;</a>
+          <a href="#como-funciona" class="btn btn-ghost">Ver como funciona</a>
+        </div>
+        <p class="hero-mini">Presencial em Ubá/MG · ou 100% online, onde você estiver.</p>
+      </div>
+
+      <div class="hero-card">
+        <div class="lab">Resultado real · 4 semanas</div>
+        <h3>Ana Paula, 47 · usuária de Ozempic</h3>
+        <div class="metric"><span class="ml">Gordura perdida</span><span class="mv g">89%<span style="font-size:13px;color:var(--soft);font-weight:600"> da perda total</span></span></div>
+        <div class="metric"><span class="ml">Massa magra</span><span class="mv t">preservada</span></div>
+        <div class="metric"><span class="ml">Cintura</span><span class="mv t">−2 cm</span></div>
+        <div class="metric"><span class="ml">Força (3 exercícios-base)</span><span class="mv m">+42%</span></div>
+        <p class="tag">Dados reais de avaliação. Resultados variam conforme cada caso.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="strip"><div class="wrap"><span><b>Método</b></span><span><b>Ciência</b></span><span><b>Resultados</b></span><span>Transformação real · Dados reais</span></div></div>
+
+<!-- ============ O PROBLEMA ============ -->
+<section class="light wrap">
+  <span class="eyebrow">O risco que ninguém te contou</span>
+  <h2 class="sec">Você não tem medo de <span class="m">não emagrecer</span>.<br>Tem medo de emagrecer <span class="t">do jeito errado</span>.</h2>
+  <p class="lead">O GLP-1 reduz o apetite e o peso cai rápido. Mas sem treino estruturado, parte do que você perde é músculo — e é justamente isso que te deixa flácida, fraca e com mais risco de rebote quando parar a medicação.</p>
+
+  <div class="prob-grid">
+    <div class="prob"><div class="n">01</div><h4>Perde gordura e músculo juntos</h4><p>O corpo fica "menor", mas não mais firme nem mais forte. A flacidez aparece justamente aí.</p></div>
+    <div class="prob"><div class="n">02</div><h4>Metabolismo desacelera</h4><p>Menos músculo significa menos gasto em repouso — o que torna a manutenção futura mais difícil.</p></div>
+    <div class="prob"><div class="n">03</div><h4>Força e energia despencam</h4><p>Fraqueza funcional, cansaço e a sensação de não se reconhecer no próprio corpo.</p></div>
+    <div class="prob"><div class="n">04</div><h4>Risco de rebote ao parar</h4><p>Sem massa magra preservada, recuperar o peso ao interromper a caneta fica muito mais provável.</p></div>
+  </div>
+</section>
+
+<!-- ============ TESE ============ -->
+<section class="light wrap">
+  <div class="tese">
+    <p class="q">Estudos mostram que, sem exercício estruturado, o GLP-1 mantém o peso baixo <span class="m">mas com perda contínua de massa magra</span>. Com exercício associado, você perde gordura e <span class="t">recupera músculo ao mesmo tempo</span>. A diferença não é motivação — é método.</p>
+    <p class="src">Base científica: Lundgren et al., New England Journal of Medicine, 2021 · entre as 8 referências de alto impacto que sustentam o programa.</p>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section class="light wrap" id="como-funciona">
+  <span class="eyebrow">Como funciona</span>
+  <h2 class="sec">Um sistema em <span class="t">5 etapas</span> — não um treino solto.</h2>
+  <p class="lead">Cada etapa alimenta a seguinte. Do diagnóstico ao acompanhamento, seu corpo é lido, classificado e monitorado por dados — não por achismo.</p>
+
+  <div class="steps">
+    <div class="step"><div class="sn">1</div><h5>Diagnóstico Digital</h5><p>Anamnese completa sobre seu uso da medicação, corpo e objetivos.</p></div>
+    <div class="step"><div class="sn">2</div><h5>Avaliação Corporal</h5><p>Composição por dobras, medidas e testes de força funcional.</p></div>
+    <div class="step"><div class="sn">3</div><h5>Relatório Personalizado</h5><p>Seu perfil metabólico (A, B ou C), riscos e estratégia inicial.</p></div>
+    <div class="step"><div class="sn">4</div><h5>Protocolo por Fase</h5><p>Treino estruturado em 3 fases, com vídeos no aplicativo.</p></div>
+    <div class="step"><div class="sn">5</div><h5>Monitoramento</h5><p>Check-in semanal com feedback personalizado e ajustes.</p></div>
+  </div>
+</section>
+
+<!-- ============ O QUE VOCÊ RECEBE ============ -->
+<section class="light wrap">
+  <span class="eyebrow">O que você recebe</span>
+  <h2 class="sec">Acompanhamento premium <span class="m">de verdade</span>, por 45 dias.</h2>
+
+  <div class="deliv">
+    <div class="di"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div><div><h4>Avaliação corporal completa</h4><p>Composição por dobras, circunferências e testes de força — a base de tudo.</p></div></div>
+    <div class="di"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></div><div><h4>Relatório de Preservação Corporal</h4><p>Documento personalizado com seu perfil, riscos e plano dos próximos 30 dias.</p></div></div>
+    <div class="di"><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div><h4>Programa no aplicativo</h4><p>Treino estruturado por fase com vídeos de execução — você nunca treina perdida.</p></div></div>
+    <div class="di"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><div><h4>Check-in semanal + feedback</h4><p>Toda semana eu leio seus dados e devolvo orientação personalizada por WhatsApp.</p></div></div>
+    <div class="di"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><div><h4>Reavaliações de progresso</h4><p>Acompanhamento dos resultados ao longo do programa, com ajustes de estratégia.</p></div></div>
+    <div class="di"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><h4>Estratégia que respeita sua rotina</h4><p>Protocolo adaptável a quem tem agenda corrida, viaja ou treina em casa.</p></div></div>
+  </div>
+</section>
+
+<!-- ============ PROVA ============ -->
+<section class="light wrap">
+  <div class="proof">
+    <div class="ph"><span class="pill">Caso real</span><span class="pill" style="color:var(--mag);background:var(--magSoft)">Perfil A · Ozempic</span></div>
+    <h3>Ana Paula, 47 anos — 4 semanas de programa</h3>
+    <p class="csub">Usava Ozempic há 8 meses e já havia perdido 14 kg. O medo era real: perder músculo e ficar flácida. Veja o que mudou quando o treino entrou com método.</p>
+    <div class="stat-grid">
+      <div class="stat"><div class="v g">89%</div><div class="l">da perda foi gordura — massa magra preservada</div></div>
+      <div class="stat"><div class="v t">−2 cm</div><div class="l">de circunferência abdominal</div></div>
+      <div class="stat"><div class="v m">+42%</div><div class="l">de força nos 3 exercícios-base</div></div>
+      <div class="stat"><div class="v t">−1,8 kg</div><div class="l">em ritmo seguro (&lt;1%/semana)</div></div>
+    </div>
+    <p class="note"><b>O ponto-chave:</b> ela perdeu peso preservando o músculo — exatamente o oposto do que acontece com a caneta sozinha. Não é sorte. É o protocolo força-primeiro funcionando como foi desenhado.</p>
+  </div>
+</section>
+
+<!-- ============ PARA QUEM ============ -->
+<section class="light wrap">
+  <span class="eyebrow">Este programa é para você?</span>
+  <h2 class="sec">Feito para quem leva o próprio corpo <span class="t">a sério</span>.</h2>
+  <div class="whom">
+    <div class="col yes">
+      <h4>É para você se…</h4>
+      <ul>
+        <li>Usa ou vai usar GLP-1 (Ozempic, Wegovy, Mounjaro)</li>
+        <li>Tem mais de 40 e quer preservar firmeza e força</li>
+        <li>Tem medo de emagrecer e ficar flácida ou fraca</li>
+        <li>Quer método e dados, não promessa milagrosa</li>
+        <li>Valoriza acompanhamento de perto e personalizado</li>
+      </ul>
+    </div>
+    <div class="col no">
+      <h4>Não é para você se…</h4>
+      <ul>
+        <li>Procura solução mágica sem nenhum esforço</li>
+        <li>Quer o programa mais barato, custe o que custar à entrega</li>
+        <li>Não pretende seguir o protocolo nem os check-ins</li>
+        <li>Busca treino genérico de planilha pronta</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFERTA ============ -->
+<section class="light wrap">
+  <div class="offer">
+    <div class="inner">
+      <span class="vagas">⬤ Apenas 6 vagas por mês</span>
+      <h3>Programa Preservação Corporal GLP-1 — 45 dias</h3>
+      <ul class="incl">
+        <li>Avaliação corporal completa + Relatório de Preservação Corporal</li>
+        <li>Protocolo de treino personalizado por fase (A, B ou C)</li>
+        <li>Programa no aplicativo com vídeos de execução</li>
+        <li>Check-in semanal com feedback personalizado por WhatsApp</li>
+        <li>Reavaliações de progresso ao longo dos 45 dias</li>
+        <li>Orientação de prioridade proteica para o contexto GLP-1</li>
+      </ul>
+      <div class="price">
+        <div class="from">de R$ 1.500</div>
+        <div class="now">R$ 1.200 <small>à vista</small></div>
+        <div class="inst">ou 3x de R$ 400 no cartão</div>
+      </div>
+      <a href="#COLAR_LINK_EDUZZ_AQUI" class="btn btn-primary">Garantir minha vaga &rarr;</a>
+      <p class="guarantee"><b>Compromisso de método:</b> se você seguir o protocolo e fizer os check-ins, e os dados da reavaliação não mostrarem evolução, eu refaço sua estratégia sem custo adicional.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUTORIDADE ============ -->
+<section class="light wrap">
+  <span class="eyebrow">Quem conduz</span>
+  <div class="auth">
+    <h3>Prof. Sherley Ferreira</h3>
+    <div class="role">Profissional de Educação Física · Mestre em Ciência da Nutrição</div>
+    <p>São quase três décadas ajudando pessoas a transformar o corpo com estratégia, não com esforço aleatório. O Sistema Sherley de Preservação Corporal GLP-1 nasceu para resolver o erro mais comum da era das canetas: emagrecer perdendo o que sustenta o corpo. Aqui, cada decisão é baseada em ciência e nos seus dados.</p>
+    <div class="creds">
+      <span class="cred">29 anos de experiência</span>
+      <span class="cred">Mestre em Ciência da Nutrição</span>
+      <span class="cred">Top 3 Personal Trainers do Brasil — 2015</span>
+      <span class="cred">Studio Fit Personal · Ubá/MG</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="light wrap">
+  <span class="eyebrow">Dúvidas frequentes</span>
+  <h2 class="sec">Antes de garantir sua vaga</h2>
+  <div class="faq">
+    <div class="qa"><h5>Funciona se eu treino em casa ou viajo muito?</h5><p>Sim. O protocolo é adaptável ao seu contexto — studio, academia ou casa — e o programa no aplicativo te acompanha onde você estiver. Há versão presencial (Ubá) e 100% online.</p></div>
+    <div class="qa"><h5>Preciso estar usando GLP-1 para entrar?</h5><p>O programa é desenhado para o contexto das canetas, mas a estratégia de preservar músculo enquanto se reduz gordura vale para quem quer emagrecer com inteligência depois dos 40. Na avaliação definimos seu perfil.</p></div>
+    <div class="qa"><h5>Por que só 6 vagas por mês?</h5><p>Porque o acompanhamento é real e personalizado. Leio os dados de cada pessoa toda semana e ajusto a estratégia. Para manter esse nível, não atendo em volume.</p></div>
+    <div class="qa"><h5>Vocês substituem meu médico ou nutricionista?</h5><p>Não. O programa cuida do exercício e da estratégia corporal. Orientação alimentar é educacional; o plano nutricional individualizado é do nutricionista. Mantenha seu acompanhamento médico da medicação.</p></div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+  <div class="wrap">
+    <h2>Emagrecer todo mundo consegue.<br><span class="t">Preservar o corpo</span> enquanto isso — <span class="m">é com método.</span></h2>
+    <p>São apenas 6 vagas por mês. Se a sua transformação já começou, proteja o que ela está construindo.</p>
+    <a href="#COLAR_LINK_EDUZZ_AQUI" class="btn btn-primary" style="margin-top:30px">Quero minha vaga &rarr;</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fn">STUDIO FIT PERSONAL</div>
+    <div style="margin-top:8px">Sistema Sherley de Preservação Corporal GLP-1™ · @sherleyferreira.oficial · Ubá/MG</div>
+    <p class="leg">Este programa é de exercício físico e estratégia corporal. Não substitui avaliação ou prescrição médica, nem acompanhamento nutricional individualizado. O uso de medicamentos GLP-1 deve ser acompanhado por médico. Resultados variam conforme adesão e características individuais.</p>
+  </div>
+</footer>
+
+</body>
+</html>
